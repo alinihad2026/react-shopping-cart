@@ -1,5 +1,5 @@
 export const words={
     headerTitle:"Shopping Cart",
-    footerTitle:"",
+    footerTitle:"footer",
     content:"content"
 }
