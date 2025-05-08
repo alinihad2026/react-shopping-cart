@@ -65,3 +65,21 @@ main .wrapper .wrapper-filter{
     width: 30%;
     }
     
+.product-info img{
+    display: block;
+    width: 40%;
+    margin: 20px auto;
+}
+.product-info p{
+    color: blue;
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+.icon-close{
+    position:absolute;
+    right:10px;
+    top:10px;
+    cursor: pointer;
+    font-size: 20px;
+}
