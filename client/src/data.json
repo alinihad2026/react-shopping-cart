@@ -4,7 +4,7 @@
     "title":"product 1",
     "imageurl":"./images/pic1.png",
     "desc":"this is product 1",
-    "sizes":["s","m"],
+    "sizes":["s","m","xxl"],
     "price":10
 },
 {
