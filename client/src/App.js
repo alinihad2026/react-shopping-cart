@@ -38,7 +38,6 @@ if (order =="lowerest"){
 setProducts(newProducts);
 }
 
-  // console.log(products)
   return (
     <div className="layout">
       <Header/>
@@ -55,4 +54,3 @@ setProducts(newProducts);
 }
 
 export default App;
-// productsاي اسم نخترعه={products الستيت هذا }
