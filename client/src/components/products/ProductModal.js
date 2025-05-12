@@ -6,9 +6,12 @@ function ProductModal(props) {
     <modal isOpen={product} onRequestClose={closeModal}>
         <span className="icon-close"   onClick={closeModal}>&times;</span>
       <div className="product-info">
-      <img img src={product.imageurl} alt={product.title}/>
-      <p>{product.title}</p>
+      <img  src={product.imageurl} alt={product.title}/>
+            <p>{product.title}</p>
             <p>{product.desc}</p>
+            <p>{product.sizes}</p>
+             <p>{product.price}</p>
+
 
       </div>
       </modal>
