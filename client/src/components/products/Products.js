@@ -21,7 +21,7 @@ const closeModal=()=>{
             <p>{product.title}</p>
             <span>{product.price}</span>
           </div>
-          <button>Add To Cart</button>
+          <button onClick={()=>props.addToCartProduct(product)}>Add To Cart</button>
         </div>
       ))}
       <ProductModal product={product} closeModal={closeModal} />
