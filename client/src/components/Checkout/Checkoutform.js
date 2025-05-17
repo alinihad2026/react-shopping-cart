@@ -1,5 +1,6 @@
 import React from 'react'
 import Input from '../Input/Input'
+import Zoom from 'react-reveal/Zoom';
 
 function Checkoutform(props) {
   return (
@@ -7,6 +8,7 @@ function Checkoutform(props) {
        {/* Checkoutform */}
         {props.showForm && <div className="checkout-form"> 
           <span className="close-icon" onClick={()=>props.setShowForm(false)}>&times;</span>
+          <Zoom left>
           <form onSubmit={props.submitOrder}>
            <Input label="name" type="text" onChange={props.handleChange} name="name"/>
           <Input label="Email" type="email" onChange={props.handleChange} name="email"/>
@@ -19,6 +21,7 @@ function Checkoutform(props) {
               <button type="submit" >Checkout</button>
             </div>
           </form>
+          </Zoom>
 
         </div>}
 
