@@ -1,8 +1,11 @@
 import React from 'react'
+import Flip from 'react-reveal/Flip';
+
 
 function Filter(props) {
   return (
-    <div className="wrapper-filter">
+    <Flip right>
+      <div className="wrapper-filter">
         <h2 className='filter-title'>Filter</h2>
         <div className='num-of-product'>Number Of Product {props.numberOfProducts}</div>
         <div className='filter-by-size'>
@@ -26,6 +29,7 @@ function Filter(props) {
             </select>
             </div>
         </div>
+    </Flip>
   )
 }
 
