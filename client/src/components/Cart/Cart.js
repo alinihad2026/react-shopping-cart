@@ -1,11 +1,26 @@
 import React, { useState } from "react";
+import Checkoutform from "../Checkout/Checkoutform";
 
 
 
 
 
 function Cart(props) {
+  const [value, setValue] = useState("");
   const [showForm,setShowForm]=useState(false);
+  const submitOrder=(e)=>{
+    e.preventDefault();
+    const order ={
+      name:value.name,
+      email:value.email,
+    }
+    console.log(order)
+  }
+
+  const handleChange =(e)=>{
+    setValue((prevState)=>({ ...prevState,[e.target.name]:e.target.value}))
+    console.log(value)
+  }
   return (
     <div className="cart-wrapper">
       <div className="cart-title">
@@ -47,27 +62,7 @@ function Cart(props) {
         )
         }
 
-        {/* Checkoutform */}
-        {showForm && <div className="checkout-form"> 
-          <span className="close-icon" onClick={()=>setShowForm(false)}>&times;</span>
-          <form>
-            <div>
-              <label>Name</label>
-              <input type="text" require name="name"></input>
-            </div>
-
-            <div>
-              <label>Email</label>
-              <input type="email" require name="email"></input>
-            </div>
-
-            <div>
-              <button type="submit" >Checkout</button>
-            </div>
-          </form>
-
-        </div>}
-
+       <Checkoutform showForm={showForm} submitOrder={submitOrder} handleChange={handleChange} setShowForm={setShowForm} />
 
 
 
