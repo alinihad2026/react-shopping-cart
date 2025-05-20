@@ -6,6 +6,8 @@ import data from "./data.json"
 import Products from "./components/products/Products";
 import Filter from "./components/Filter/Filter";
 import Cart from "./components/Cart/Cart";
+import {Provider} from "react-redux";
+import store from "./store/store";
 function App() {
   const [products,setProducts]=useState(data);
   const [size,setSize]=useState("");
@@ -67,14 +69,15 @@ setProducts(newProducts);
  const removeCartProduct=(product)=>{
  const cartItemsClone=[...cartItems]
 setCartItems(cartItemsClone.filter(p=> p.id !==product.id))
- }
+ };
 
  
 
 
 
   return (
-    <div className="layout">
+    <Provider store={store}>
+      <div className="layout">
       <Header/>
       <main>
         <div className="wrapper">
@@ -85,7 +88,9 @@ setCartItems(cartItemsClone.filter(p=> p.id !==product.id))
       </main>
       <Footer/>
     </div>
+    </Provider>
   );
+
 }
 
 export default App;
