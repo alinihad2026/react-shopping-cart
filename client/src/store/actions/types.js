@@ -1,5 +1,10 @@
 export const FETCH_PRODUCTS="FETCH_PRODUCTS";
-//or this 
+export const FILTER_SIZE="FILTER_SIZE";
+export const FILTER_SORT="FILTER_SORT";
+
+
+
+//or this another way to write function
 // export const fetchProducts=()=>{
 //     return "FETCH_PRODUCTS"
 // }
