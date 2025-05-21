@@ -46,7 +46,7 @@ useEffect(() => { //ارسال داتا واستقبال داتا
 
 export default connect((state)=>{ //الموجودة جوة الريدكس او الستور نغس الشيstateيفوم بربط الرياكت بالريدكس بداخله اثنين دوال الاولى
   return{
-       products: state.products.products   //props.productsنفس المعنى
+       products: state.products.filterProducts   //props.productsنفس المعنى
   } 
 
 },{ fetchProducts } )(Products) //{ fetchProducts }=props.fetchProducts
