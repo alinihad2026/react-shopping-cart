@@ -1,6 +1,12 @@
+//Reducersهذا الملف سيكون المجمع لكل 
 
-const reducer=(state={},action)=>{
-    return state
-}
 
-export default reducer;
+import { combineReducers } from "redux";
+import {productsReducer} from "./productsReducer";
+
+
+export default combineReducers({ //key-valueداخلها اوبجكت عبارة عن
+    products:productsReducer,//productsوهوkeyلازم نستدعي الstoreفي داخلproductsReducer الوصول الى هذا Reducerيحتوي على اوبجكت كبير بداخله كثير منstoreال ***********
+})
+
+

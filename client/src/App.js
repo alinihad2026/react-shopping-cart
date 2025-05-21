@@ -7,7 +7,7 @@ import Products from "./components/products/Products";
 import Filter from "./components/Filter/Filter";
 import Cart from "./components/Cart/Cart";
 import {Provider} from "react-redux";
-import store from "./store/store";
+import store from "./store/Store";
 function App() {
   const [products,setProducts]=useState(data);
   const [size,setSize]=useState("");
