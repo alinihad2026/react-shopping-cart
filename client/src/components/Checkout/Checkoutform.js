@@ -11,14 +11,14 @@ function Checkoutform(props) {
           <Zoom left>
           <form onSubmit={props.submitOrder}>
            <Input label="name" type="text" onChange={props.handleChange} name="name"/>
-          <Input label="Email" type="email" onChange={props.handleChange} name="email"/>
+           <Input label="Email" type="email" onChange={props.handleChange} name="email"/>
             {/* <div>
               <label>Email</label>
               <input type="email" required name="email" onChange={props.handleChange}></input>
             </div> */}
 
             <div>
-              <button type="submit" >Checkout</button>
+              <button type="submit"  onClick={()=> props.setOrder(true)}>Checkout</button>
             </div>
           </form>
           </Zoom>
