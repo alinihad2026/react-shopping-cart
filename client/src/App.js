@@ -60,9 +60,9 @@ setProducts(newProducts);
  }
 
 
- useEffect(()=>{
-  localStorage.setItem("cartItems",JSON.stringify(cartItems))
- },[cartItems])
+//  useEffect(()=>{
+//   localStorage.setItem("cartItems",JSON.stringify(cartItems))
+//  },[cartItems])
 
 
 
