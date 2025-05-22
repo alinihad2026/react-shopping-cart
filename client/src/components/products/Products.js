@@ -4,6 +4,7 @@ import ProductModal from "./ProductModal";
 import Bounce from 'react-reveal/Bounce';
 import { connect } from "react-redux";
 import { fetchProducts } from "../../store/actions/products";
+import { addToCart } from "../../store/actions/cart";
 
 
 
@@ -34,7 +35,7 @@ useEffect(() => { //ارسال داتا واستقبال داتا
             <p>{product.title}</p>
             <span>{product.price}</span>
           </div>
-          <button onClick={()=>props.addToCartProduct(product)}>Add To Cart</button>
+          <button onClick={()=>props.addToCart(product)}>Add To Cart</button>
         </div>
       )):"loading ...."}
       <ProductModal product={product} closeModal={closeModal} />
@@ -49,7 +50,7 @@ export default connect((state)=>{ //الموجودة جوة الريدكس او 
        products: state.products.filterProducts   //props.productsنفس المعنى
   } 
 
-},{ fetchProducts } )(Products) //{ fetchProducts }=props.fetchProducts
+},{ fetchProducts,addToCart } )(Products) //{ fetchProducts }=props.fetchProducts
 
 
 
