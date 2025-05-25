@@ -23,4 +23,8 @@ router.delete('/api/products/:id',async(req,res)=>{
     res.send(deleteProduct)
 })
 
+
 module.exports=router; //علمود نستخدمة في السيرفر
+
+
+//لازم اسميه راوت برودكت لانه يخص البرودكت بس نسيت
