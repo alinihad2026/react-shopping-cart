@@ -7,7 +7,7 @@ function OrderModal(props) {
 const {order,closeModal,cartItems}=props
   return (
     <>
-       <Modal isOpen={order} onRequestClose={closeModal}>
+       {order && <Modal isOpen={order} onRequestClose={closeModal}>
         <div className="order-info">
           <span className="close-modal-checkout" onClick={closeModal}>&times;</span>
         <p className="alert-success">order done success</p>
@@ -38,7 +38,7 @@ const {order,closeModal,cartItems}=props
           </tr>
         </table>
         </div>
-      </Modal>
+      </Modal>}
       </>
     
   )

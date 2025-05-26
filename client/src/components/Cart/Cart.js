@@ -4,6 +4,7 @@ import Bounce from 'react-reveal/Bounce';
 import { connect } from "react-redux";
 import { removeCart } from "../../store/actions/cart";
 import OrderModal from "./orderModal"
+import { clearOrder, createOrder } from "../../store/actions/order";
 function Cart(props) {
   const [order, setOrder] = useState(false);
   const [value, setValue] = useState("");
@@ -14,11 +15,14 @@ function Cart(props) {
       name:value.name,
       email:value.email,
     }
-    setOrder(order)
-    console.log(order)
+    // setOrder(order)
+    // console.log(order)
+    props.createOrder(order);
   }
     const closeModal =()=>{
-         setOrder(false);
+      //  setOrder(false);
+       props.clearOrder();
+       setShowForm(false)
   }
 
   const handleChange =(e)=>{
@@ -36,7 +40,7 @@ function Cart(props) {
       </div>
       <>
       {/* modal */}
-      <OrderModal cartItems= {props.cartItems} order={order} closeModal={closeModal}/>
+      <OrderModal cartItems= {props.cartItems} order={props.order} closeModal={closeModal}/>
       <Bounce bottom cascade>
       <div className="cart-items">
         {props.cartItems.map((item) => (
@@ -79,6 +83,7 @@ function Cart(props) {
 
 export default connect((state) =>{
     return{
+        order:state.order.order,  //return {key هوorder:....etc}<=case <=orderReducerالي سميناه في ملفkeyالاخير هو اسمorder
         cartItems:state.cart.cartItems
     }
-} ,{removeCart} )(Cart)
+} ,{removeCart,createOrder,clearOrder} )(Cart) //من الاكشن الي سويناه الهنremoveCart,createOrderنعملهاrun
